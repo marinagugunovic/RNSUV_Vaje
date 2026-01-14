@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "Free Shipping", "description": "On orders over €25", "cost": 300, "tag": "Popular" },
+  { "id": 2, "title": "10% Off", "description": "Any skincare item", "cost": 500 },
+  { "id": 3, "title": "Free Mini", "description": "Travel-size product", "cost": 800, "tag": "New" },
+  { "id": 4, "title": "15% Off", "description": "Makeup products", "cost": 900 }
+]

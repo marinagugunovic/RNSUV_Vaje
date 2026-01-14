@@ -1,3 +1,5 @@
+const ctrlLoyalty = require('../controllers/loyalty');
+
 const express = require('express')
 const router = express.Router();
 const jwt = require('jsonwebtoken');
@@ -25,6 +27,9 @@ router.get('/contacts/:id', authenticateToken, ctrlContacts.getContactById); // 
 router.post('/contacts', authenticateToken, ctrlContacts.createContact); // Ustvari nov kontakt
 router.put('/contacts/:id', authenticateToken, ctrlContacts.updateContact); // Posodobi kontakt
 router.delete('/contacts/:id', authenticateToken, ctrlContacts.deleteContact); // Izbrisi kontakt
+/* Loyalty (varovano) */
+router.get('/dashboard', authenticateToken, ctrlLoyalty.getDashboard);
+router.post('/redeem/:rewardId', authenticateToken, ctrlLoyalty.redeemReward);
 
 
 /* Middleware za preverjanje JWT */
